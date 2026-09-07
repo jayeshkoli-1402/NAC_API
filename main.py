@@ -49,14 +49,16 @@ def encode(data: InputData):
 def home():
     return {
         "System MSG:": "News Categorization API is Online",
-        "Live At:": "",
-        "Interactive UI:": "/docs",
-        "Test Inputs:": "POST /predict with headline, short_description, authors",
+        "Live At:": "https://nac-api-opmx.onrender.com",
+        "Interactive UI:": "https://nac-api-opmx.onrender.com/docs",
+        "Test Inputs:": "https://docs.google.com/document/d/1PNjAmppqH00A_i8AZWuJq_umSun2_RqFHjDBRuNn7Rg/edit?usp=sharing",
     }
 
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
 
 @app.post("/predict")
 def predict(data: InputData):
