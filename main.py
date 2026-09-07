@@ -54,7 +54,9 @@ def home():
         "Test Inputs:": "POST /predict with headline, short_description, authors",
     }
 
-    
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
 
 @app.post("/predict")
 def predict(data: InputData):
